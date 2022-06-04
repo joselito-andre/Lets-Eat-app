@@ -215,43 +215,70 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CM-Wf-dDW">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1CM-Wf-dDW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLEASE SELECT A LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Yb-l6v">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE SELECT A LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Yb-l6v">
                                                     <rect key="frame" x="8" y="24" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="C3B-GQ-g29"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                                     <color key="textColor" name="LetsEat Light Gray"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-iF-02k">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPLORE " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-Iw-iGO">
+                                                    <rect key="frame" x="8" y="45" width="255" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="37" id="J2J-9m-Cwq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLn-iF-02k">
                                                     <rect key="frame" x="271" y="50" width="96" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="96" id="DFJ-V0-Ueh"/>
+                                                        <constraint firstAttribute="height" constant="25" id="P2i-Jo-Goa"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="btn-location"/>
                                                     <connections>
                                                         <segue destination="OpZ-Ud-JeQ" kind="presentation" id="Rld-jR-Rqg"/>
                                                     </connections>
                                                 </button>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-Qe-gla">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-Qe-gla">
                                                     <rect key="frame" x="8" y="89" width="359" height="1"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="tintColor" name="LetsEat Light Gray"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="MZl-0c-SjK"/>
+                                                    </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXPLORE de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XB-Iw-iGO">
-                                                    <rect key="frame" x="8" y="45" width="255" height="37"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="2XB-Iw-iGO" firstAttribute="top" secondItem="ev9-Yb-l6v" secondAttribute="bottom" id="0ui-2y-U8Q"/>
+                                                <constraint firstItem="ev9-Yb-l6v" firstAttribute="leading" secondItem="1CM-Wf-dDW" secondAttribute="leading" constant="8" id="2L8-jz-H1U"/>
+                                                <constraint firstItem="NLn-iF-02k" firstAttribute="leading" secondItem="2XB-Iw-iGO" secondAttribute="trailing" constant="8" id="9RN-gc-wQ0"/>
+                                                <constraint firstItem="xoF-Qe-gla" firstAttribute="leading" secondItem="1CM-Wf-dDW" secondAttribute="leading" constant="8" id="LQ0-wW-Vyu"/>
+                                                <constraint firstAttribute="trailing" secondItem="NLn-iF-02k" secondAttribute="trailing" constant="8" id="OwE-d1-e5P"/>
+                                                <constraint firstAttribute="trailing" secondItem="ev9-Yb-l6v" secondAttribute="trailing" constant="8" id="QNo-WO-oJp"/>
+                                                <constraint firstAttribute="trailing" secondItem="xoF-Qe-gla" secondAttribute="trailing" constant="8" id="U2e-kc-c5o"/>
+                                                <constraint firstItem="2XB-Iw-iGO" firstAttribute="leading" secondItem="1CM-Wf-dDW" secondAttribute="leading" constant="8" id="WfN-3Q-fR4"/>
+                                                <constraint firstItem="xoF-Qe-gla" firstAttribute="top" secondItem="2XB-Iw-iGO" secondAttribute="bottom" constant="7" id="e3u-Tk-Dwe"/>
+                                                <constraint firstAttribute="height" constant="90" id="ijp-u3-VCs"/>
+                                                <constraint firstItem="NLn-iF-02k" firstAttribute="top" secondItem="ev9-Yb-l6v" secondAttribute="bottom" constant="5" id="kHg-ms-F5H"/>
+                                                <constraint firstItem="ev9-Yb-l6v" firstAttribute="top" secondItem="1CM-Wf-dDW" secondAttribute="top" constant="24" id="pyd-LL-hJF"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1CM-Wf-dDW" firstAttribute="leading" secondItem="uQG-Jw-fVN" secondAttribute="leading" id="C84-uD-z7C"/>
+                                        <constraint firstItem="1CM-Wf-dDW" firstAttribute="top" secondItem="uQG-Jw-fVN" secondAttribute="top" id="Gmq-qb-CCO"/>
+                                        <constraint firstAttribute="trailing" secondItem="1CM-Wf-dDW" secondAttribute="trailing" id="j57-qM-GXY"/>
+                                    </constraints>
                                 </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="sGe-nn-gGT" id="oTR-4p-gb4"/>
